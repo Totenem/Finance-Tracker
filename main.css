@@ -1,0 +1,229 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ecd4ea;
+  /* White */
+  color: #511f52;
+  /* Darkest Purple */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Left Block: Financial Tracker */
+.tracker {
+  background-color: #ffffff;
+  /* Light Purple */
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: span 3;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #511f52;
+}
+
+/* Right Top Section: Income and Expense */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  background-color: #693b69;
+  /* Medium Purple */
+  color: #ffffff;
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #ecd4ea;
+  /* Light Purple */
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Transaction Form */
+.form-section {
+  padding: 15px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Success and Error Styles */
+.success {
+  background-color: #d4edda;
+  /* Light green */
+  color: #155724;
+  /* Dark green */
+}
+
+.error {
+  background-color: #f8d7da;
+  /* Light red */
+  color: #721c24;
+  /* Dark red */
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #511f52;
+}
+
+#delete {
+  background-color: rgb(245, 74, 74);
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#delete:hover {
+  background-color: darkred;
+}
+
+#logoutButton {
+  background-color: rgb(245, 74, 74);
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 25px;
+  margin-top: 31px;
+}
+
+#logoutButton:hover {
+  background-color: darkred;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #a987a8;
+  border-radius: 5px;
+  color: #511f52;
+}
+
+form button {
+  background-color: #693b69;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+form button:hover {
+  background-color: #511f52;
+}
+
+/* Bottom Right Section: Table */
+.table-section {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-section h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #511f52;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table th,
+table td {
+  border: 1px solid #a987a8;
+  padding: 10px;
+  color: #511f52;
+}
+
+table th {
+  background-color: #ecd4ea;
+  color: #511f52;
+}
